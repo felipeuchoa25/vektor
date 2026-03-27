@@ -36,9 +36,15 @@
   --transition: 0.18s ease;
 }
 [data-theme="gray"] {
-  --bg: #111214; --sidebar-bg: #0d0e10; --card: #1a1c1f; --card2: #222528;
-  --border: #2a2d32; --border2: #363a40; --accent: #5e9eff; --accent-dim: rgba(94,158,255,0.12);
-  --text: #e8eaed; --text2: #9aa0ab;
+  --bg: #adc5bf; --sidebar-bg: #8faead; --card: #c5d9d4; --card2: #d6e6e2;
+  --border: rgba(0,0,0,0.10); --border2: rgba(0,0,0,0.17);
+  --accent: #1e7a72; --accent-dim: rgba(30,122,114,0.15);
+  --accent2: #155e58;
+  --green: #0f766e; --green-dim: rgba(15,118,110,0.15);
+  --yellow: #b45309; --yellow-dim: rgba(180,83,9,0.12);
+  --red: #b91c1c; --red-dim: rgba(185,28,28,0.12);
+  --text: #0f2421; --text2: #2d5652; --muted: #5a8a84;
+  --shadow: 0 4px 24px rgba(0,0,0,0.12);
 }
 [data-theme="blue"] {
   --bg: #06101f; --sidebar-bg: #040c18; --card: #0d1c30; --card2: #122540;
@@ -609,6 +615,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
     <div class="nav-item" onclick="showTab('favoritos')">
       <span class="icon">⭐</span> Favoritos
       <span class="nav-badge green" id="badge-fav">0</span>
+    </div>
+    <div class="nav-item" onclick="showTab('manual');manualOnOpen()">
+      <span class="icon">📖</span> Manual & FAQ
     </div>
     <div class="nav-item" onclick="showTab('config')">
       <span class="icon">⚙️</span> Configurações
@@ -1633,6 +1642,303 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
   </div>
 </div>
 
+<!-- ===== MANUAL & FAQ ===== -->
+<div id="tab-manual" class="tab-panel">
+  <div class="page-header">
+    <h2><span>📖</span> Manual & FAQ</h2>
+    <p>Tudo que você precisa saber para dominar o Kronos — do básico ao avançado</p>
+  </div>
+
+  <!-- Quick nav pills -->
+  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px">
+    <a href="#man-start" onclick="manScroll('man-start')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">🚀 Início rápido</a>
+    <a href="#man-radar" onclick="manScroll('man-radar')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">🛰️ Spy Radar</a>
+    <a href="#man-garim" onclick="manScroll('man-garim')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">🔍 Garimpagem</a>
+    <a href="#man-plat" onclick="manScroll('man-plat')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">🏪 Plataformas</a>
+    <a href="#man-geo" onclick="manScroll('man-geo')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">🌎 GEO Intel</a>
+    <a href="#man-copy" onclick="manScroll('man-copy')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">✍️ Copy Engine</a>
+    <a href="#man-ia" onclick="manScroll('man-ia')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">🤖 IA VEKTOR</a>
+    <a href="#man-thunder" onclick="manScroll('man-thunder')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">🕷️ Thunderbit</a>
+    <a href="#man-faq" onclick="manScroll('man-faq')" style="padding:6px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--text2);text-decoration:none;cursor:pointer">❓ FAQ</a>
+  </div>
+
+  <!-- INÍCIO RÁPIDO -->
+  <div id="man-start" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,var(--accent),var(--accent2,#7c3aed));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🚀</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">Início Rápido — do zero ao primeiro produto em 10 minutos</h3>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;border-top:3px solid var(--accent)">
+        <div style="font-size:11px;font-weight:700;color:var(--accent);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Passo 1 — Configure as APIs</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7">Vá em <strong>Configurações → API Keys</strong>. Cole sua chave do <strong>Facebook Graph Explorer</strong> (gratuito) e/ou sua chave da <strong>YouTube Data API</strong> (gratuita no Google Cloud). Sem isso o Spy Radar não funciona — mas tudo mais sim.</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;border-top:3px solid #22c55e">
+        <div style="font-size:11px;font-weight:700;color:#22c55e;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Passo 2 — Abra o Spy Radar</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7">Com as chaves configuradas, clique em <strong>🛰️ Spy Radar</strong> na barra lateral. O scan começa automaticamente. Em 30–60 segundos você vê quais produtos estão sendo anunciados agora no Facebook e YouTube, com score de oportunidade.</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;border-top:3px solid #f59e0b">
+        <div style="font-size:11px;font-weight:700;color:#f59e0b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Passo 3 — Adicione ao Radar</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7">Viu um produto com score alto? Clique em <strong>"+ Adicionar ao Radar"</strong>. Ele vai para <strong>Garimpagem</strong> com status "Candidato". De lá você preenche os detalhes: plataforma, comissão, AR%, e o sistema calcula o score de oportunidade automaticamente.</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:16px;border-top:3px solid #8b5cf6">
+        <div style="font-size:11px;font-weight:700;color:#8b5cf6;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px">Passo 4 — Gere os ativos</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.7">Com o produto selecionado, use o <strong>✍️ Copy Engine</strong> para gerar headlines, descrições e extensões de sitelink prontos para o Google Ads. O <strong>🤖 IA VEKTOR</strong> cria presells, ângulos de copy e análises completas de produto.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SPY RADAR -->
+  <div id="man-radar" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#ef4444,#f97316);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🛰️</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">Spy Radar — Inteligência automática de mercado</h3>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:12px">
+      <div style="font-size:13px;color:var(--text2);line-height:1.8">
+        O Spy Radar monitora <strong>duas fontes públicas e gratuitas</strong> em tempo real:<br>
+        <strong style="color:#3b82f6">📘 Facebook Ad Library API</strong> — banco oficial de anúncios do Meta. Retorna quais produtos estão com anúncios ativos, em quais países, desde quando, e o texto do criativo. O equivalente ao BigSpy ou AdSpy, sem mensalidade.<br>
+        <strong style="color:#ef4444">▶ YouTube Data API</strong> — busca novos vídeos publicados nos últimos 45 dias com suas spy keywords. Canais que estão criando conteúdo novo = produto com tráfego orgânico crescendo.
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px">
+        <div style="font-size:11px;font-weight:700;color:var(--accent);margin-bottom:6px">📊 O que é o Score?</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.6">O score (0–100) combina frescor do anúncio (quanto mais recente, melhor), volume de anúncios ativos, presença em múltiplas fontes (FB + YT = bônus) e estimativa de impressões. <strong>70+ = produto validado e em alta.</strong></div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px">
+        <div style="font-size:11px;font-weight:700;color:#22c55e;margin-bottom:6px">🔑 Como obter o token do Facebook?</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.6">Acesse <strong>developers.facebook.com/tools/explorer</strong> → faça login → clique em "Generate Access Token" → copie o token e cole em Configurações → API Keys. Processo: 2 minutos. Gratuito. Sem necessidade de app review.</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px">
+        <div style="font-size:11px;font-weight:700;color:#f59e0b;margin-bottom:6px">🔑 Como obter a YouTube API Key?</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.6">Acesse <strong>console.cloud.google.com</strong> → crie um projeto → vá em "APIs &amp; Services" → ative "YouTube Data API v3" → vá em "Credentials" → crie uma API Key. Plano gratuito: 10.000 requisições/dia — mais que suficiente.</div>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:8px;padding:14px">
+        <div style="font-size:11px;font-weight:700;color:#8b5cf6;margin-bottom:6px">🔄 Filtros de País e Nicho</div>
+        <div style="font-size:12px;color:var(--text2);line-height:1.6">Antes de escanear, selecione os países (chips azuis) e nichos (chips roxos) que você quer monitorar. O radar combina os países selecionados com as spy keywords de cada nicho ativo.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GARIMPAGEM -->
+  <div id="man-garim" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#22c55e,#16a34a);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🔍</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">Garimpagem — Banco de produtos e radar de oportunidades</h3>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px">
+      <div style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:16px">O coração do Kronos. Aqui ficam todos os produtos que você está monitorando — sejam adicionados manualmente, importados do Spy Radar ou raspados via Thunderbit.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
+        <div style="background:var(--card2);border-radius:7px;padding:12px">
+          <div style="font-size:11px;font-weight:700;color:var(--accent);margin-bottom:5px">Score de Oportunidade</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Calculado automaticamente com base em: status do produto, % nos EUA (menos = menos competição), comissão e AR%. Score 80+ = candidato forte.</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#f59e0b;margin-bottom:5px">Status dos produtos</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5"><strong>Candidato</strong> → ainda sem dados | <strong>Subindo</strong> → volume crescendo | <strong>Hype</strong> → pico de interesse | <strong>Saturado</strong> → evitar | <strong>Morto</strong> → arquivar</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#22c55e;margin-bottom:5px">Tipos de produto</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5"><strong>CPS</strong> = comissão por venda (%) | <strong>CPA</strong> = valor fixo por ação | <strong>COD</strong> = cash on delivery (pago na entrega, zero chargeback)</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#8b5cf6;margin-bottom:5px">AR% (Approval Rate)</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Porcentagem de pedidos COD que são aprovados na entrega. AR% 35%+ é bom. Plataformas como AdCombo mostram o AR% público por oferta.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PLATAFORMAS -->
+  <div id="man-plat" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#8b5cf6,#6d28d9);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🏪</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">Plataformas — Onde encontrar produtos</h3>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px">
+      <div style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:14px">O Kronos organiza as plataformas em 4 categorias estratégicas. A lógica é simples: quanto menos afiliados conhecem uma plataforma, menor a competição e menores os CPCs.</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:10px;background:var(--card2);border-radius:7px">
+          <span style="font-size:18px;flex-shrink:0">🕵️</span>
+          <div><strong style="font-size:12px;color:var(--text1,var(--text))">Ocultas</strong> <span style="font-size:11px;color:var(--muted)">— GuruMedia, LemonAds, MediaScalers, CPA.house, Cpagetti...</span><br><span style="font-size:12px;color:var(--text2)">Desconhecidas pela maioria dos afiliados BR. Competição 5–10x menor. Foco em COD para mercados internacionais. O diferencial competitivo mais forte do método.</span></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:10px;background:var(--card2);border-radius:7px">
+          <span style="font-size:18px;flex-shrink:0">🇧🇷</span>
+          <div><strong style="font-size:12px;color:var(--text1,var(--text))">Brasileiras</strong> <span style="font-size:11px;color:var(--muted)">— Hotmart, Kiwify, Eduzz, Braip, Monetizze, Kirvano, Cakto</span><br><span style="font-size:12px;color:var(--text2)">Mercado BR consolidado. Hotmart é a líder mas a mais disputada. Braip e Monetizze têm nutra com AR%. Kirvano e Cakto são mais novas e têm menos competição.</span></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:10px;background:var(--card2);border-radius:7px">
+          <span style="font-size:18px;flex-shrink:0">📋</span>
+          <div><strong style="font-size:12px;color:var(--text1,var(--text))">Conhecidas</strong> <span style="font-size:11px;color:var(--muted)">— ClickBank, MaxWeb, BuyGoods, DigiStore24, CJ, Awin...</span><br><span style="font-size:12px;color:var(--text2)">As grandes redes internacionais. Alta competição, CPCs altos. Use como referência de copy e para produtos com propostas únicas que ainda não foram exploradas nestas redes.</span></div>
+        </div>
+        <div style="display:flex;gap:12px;align-items:flex-start;padding:10px;background:var(--card2);border-radius:7px">
+          <span style="font-size:18px;flex-shrink:0">💰</span>
+          <div><strong style="font-size:12px;color:var(--text1,var(--text))">Especialistas COD</strong> <span style="font-size:11px;color:var(--muted)">— AdCombo, Terraleads, krak-medica.pl, Shakes.pro...</span><br><span style="font-size:12px;color:var(--text2)">Plataformas 100% focadas em Cash on Delivery. Pagamento na entrega elimina chargebacks. AR% público disponível no AdCombo por produto e país.</span></div>
+        </div>
+      </div>
+      <div style="margin-top:14px;padding:10px 14px;background:rgba(139,92,246,0.08);border-radius:7px;border-left:3px solid #8b5cf6">
+        <span style="font-size:12px;color:var(--text2)">💡 <strong>Dica:</strong> Nos cards de plataforma, o botão <strong>🕷️ Raspar</strong> abre a plataforma e aciona o Thunderbit Bridge — você importa todos os produtos disponíveis automaticamente de volta para o Kronos.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEO INTEL -->
+  <div id="man-geo" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#06b6d4,#0284c7);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🌎</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">GEO Intelligence — Países sub-explorados</h3>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px">
+      <div style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:14px">Enquanto todo afiliado disputa EUA, Canadá e Reino Unido com CPCs de $1–5, países Tier 2 e Tier 3 têm CPCs entre $0,03 e $0,50 com produtos COD funcionando perfeitamente.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px">
+        <div style="background:var(--card2);border-radius:7px;padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#22c55e;margin-bottom:5px">🏆 Tier 3 — Oportunidade máxima</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Índia, Paquistão, Bangladesh, Geórgia, Uganda. CPC de $0,02–$0,18. Pouquíssimos afiliados ocidentais. COD dominante. Volume alto de população.</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#f59e0b;margin-bottom:5px">⚖️ Tier 2 — Equilíbrio</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Polônia, Romênia, Turquia, México, Egito, Marrocos. CPC de $0,05–$0,60. Boa capacidade de compra, COD estabelecido, ainda baixa competição vs. Tier 1.</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px">
+          <div style="font-size:11px;font-weight:700;color:var(--accent);margin-bottom:5px">⏰ Horário do call center</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Em modelos COD, os pedidos precisam ser confirmados por telefone. O Kronos mostra o horário local de cada país para você programar seus anúncios no horário certo.</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px">
+          <div style="font-size:11px;font-weight:700;color:#8b5cf6;margin-bottom:5px">🎯 Score de Oportunidade GEO</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Cada país tem um score (0–100) baseado em CPC estimado, volume de buscas, maturidade do mercado COD e competição atual. Índia lidera com 95.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COPY ENGINE -->
+  <div id="man-copy" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">✍️</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">Copy Engine — Ativos Google Ads prontos</h3>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px">
+      <div style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:14px">Preencha os dados do produto (nome, nicho, benefício principal, preço, garantia) e o Copy Engine gera automaticamente todos os ativos necessários para uma campanha Google Ads completa.</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="display:flex;gap:10px;align-items:center;padding:9px 12px;background:var(--card2);border-radius:7px">
+          <span style="font-size:14px">📝</span><span style="font-size:12px;color:var(--text2)"><strong>15 Headlines</strong> com contador de caracteres (limite 30) — variações para todos os ângulos: resultado, científico, social e oferta</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:9px 12px;background:var(--card2);border-radius:7px">
+          <span style="font-size:14px">📋</span><span style="font-size:12px;color:var(--text2)"><strong>4 Descriptions</strong> com limite de 90 caracteres — foco em CTA e benefício único</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:9px 12px;background:var(--card2);border-radius:7px">
+          <span style="font-size:14px">🔗</span><span style="font-size:12px;color:var(--text2)"><strong>Sitelinks</strong> com título e descrição — ampliam o anúncio e aumentam CTR</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:9px 12px;background:var(--card2);border-radius:7px">
+          <span style="font-size:14px">🏷️</span><span style="font-size:12px;color:var(--text2)"><strong>Callouts &amp; Snippets</strong> — extensões curtas de destaque para o anúncio</span>
+        </div>
+        <div style="display:flex;gap:10px;align-items:center;padding:9px 12px;background:var(--card2);border-radius:7px">
+          <span style="font-size:14px">🔑</span><span style="font-size:12px;color:var(--text2)"><strong>Keywords</strong> — lista de palavras-chave dividida por match type (Exact, Phrase, Broad)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- IA VEKTOR -->
+  <div id="man-ia" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#a855f7,#7c3aed);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🤖</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">IA VEKTOR — Inteligência artificial especializada</h3>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px">
+      <div style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:14px">A IA VEKTOR tem 5 modos especializados para afiliados. Configure sua chave da API Claude em Configurações para usar diretamente — ou copie os prompts gerados para o ChatGPT.</div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
+        <div style="background:var(--card2);border-radius:7px;padding:12px;border-left:2px solid #a855f7">
+          <div style="font-size:11px;font-weight:700;color:#a855f7;margin-bottom:5px">🔬 Análise de Produto</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Análise completa: viabilidade, concorrência estimada, melhores GEOs, ângulos de copy que funcionam para o nicho específico.</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px;border-left:2px solid #3b82f6">
+          <div style="font-size:11px;font-weight:700;color:#3b82f6;margin-bottom:5px">✍️ Gerador de Presell</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Cria páginas de presell completas no formato advertorial — o tipo de página que converte melhor em tráfego frio de Google e Facebook.</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px;border-left:2px solid #22c55e">
+          <div style="font-size:11px;font-weight:700;color:#22c55e;margin-bottom:5px">🎯 Ângulos de Copy</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Gera 4 ângulos distintos (Científico, Resultado, Social, Oferta) com headlines, hooks e estrutura de argumento para cada um.</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px;border-left:2px solid #f59e0b">
+          <div style="font-size:11px;font-weight:700;color:#f59e0b;margin-bottom:5px">📊 Análise de Competição</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Estima o nível de saturação do produto no mercado, identifica lacunas competitivas e sugere diferenciadores para os anúncios.</div>
+        </div>
+        <div style="background:var(--card2);border-radius:7px;padding:12px;border-left:2px solid #ef4444">
+          <div style="font-size:11px;font-weight:700;color:#ef4444;margin-bottom:5px">🔍 Pesquisa de Palavras-chave</div>
+          <div style="font-size:12px;color:var(--text2);line-height:1.5">Gera clusters de keywords por intenção de busca, incluindo as variações "hack/trick/secret" que convertem melhor em nutra.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- THUNDERBIT -->
+  <div id="man-thunder" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#6366f1,#4f46e5);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">🕷️</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">Thunderbit Bridge — Raspagem automática de plataformas</h3>
+    </div>
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px">
+      <div style="font-size:13px;color:var(--text2);line-height:1.8;margin-bottom:14px">O Thunderbit é uma extensão Chrome gratuita que extrai dados de qualquer página com IA. O Kronos tem templates pré-configurados para cada plataforma e detecta automaticamente quando você copia os dados.</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:14px">
+        <div style="display:flex;gap:10px;padding:10px;background:var(--card2);border-radius:7px;align-items:flex-start">
+          <span style="background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">1</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5">No <strong>Spy Radar → Thunderbit Bridge</strong>, clique em um alvo (ex: AdCombo). A página abre em nova aba.</span>
+        </div>
+        <div style="display:flex;gap:10px;padding:10px;background:var(--card2);border-radius:7px;align-items:flex-start">
+          <span style="background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">2</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5">Na página aberta, ative o Thunderbit. O toast do Kronos já mostrou os campos exatos para extrair (Nome, Comissão, AR%, GEO...).</span>
+        </div>
+        <div style="display:flex;gap:10px;padding:10px;background:var(--card2);border-radius:7px;align-items:flex-start">
+          <span style="background:linear-gradient(135deg,#6366f1,#4f46e5);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">3</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5">Clique em "Extrair" → "Copiar" no Thunderbit. Volte para a aba do Kronos.</span>
+        </div>
+        <div style="display:flex;gap:10px;padding:10px;background:var(--card2);border-radius:7px;align-items:flex-start">
+          <span style="background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0">✓</span>
+          <span style="font-size:12px;color:var(--text2);line-height:1.5"><strong>O Kronos detecta automaticamente</strong> o clipboard e importa todos os produtos para Garimpagem com status "Candidato". Sem botão de importar. Funciona com JSON e TSV.</span>
+        </div>
+      </div>
+      <div style="padding:10px 14px;background:rgba(99,102,241,0.08);border-radius:7px;border-left:3px solid #6366f1">
+        <span style="font-size:12px;color:var(--text2)">⚠️ <strong>Requer HTTPS.</strong> O Kronos precisa estar rodando via GitHub Pages (ou qualquer HTTPS) para o clipboard funcionar. Via <code>file://</code> o browser bloqueia acesso ao clipboard por segurança.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div id="man-faq" style="margin-bottom:32px">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+      <div style="width:32px;height:32px;background:linear-gradient(135deg,#0ea5e9,#0284c7);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0">❓</div>
+      <h3 style="font-size:16px;font-weight:700;color:var(--text1,var(--text))">FAQ — Perguntas frequentes</h3>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:6px" id="faq-list"></div>
+  </div>
+
+  <!-- FEEDBACK -->
+  <div id="man-feedback" style="margin-bottom:40px">
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:14px;padding:32px;text-align:center;max-width:560px;margin:0 auto">
+      <div style="font-size:32px;margin-bottom:12px">💬</div>
+      <div style="font-size:16px;font-weight:700;color:var(--text1,var(--text));margin-bottom:6px">Não encontrou o que procurava?</div>
+      <div style="font-size:13px;color:var(--text2);margin-bottom:20px">Deixe seu feedback e ajude a melhorar o Kronos</div>
+
+      <!-- Stars -->
+      <div style="display:flex;justify-content:center;gap:8px;margin-bottom:20px" id="feedback-stars">
+        <span class="fb-star" data-v="1" onclick="fbSetStar(1)" style="font-size:28px;cursor:pointer;opacity:.35;transition:opacity .15s,transform .15s">★</span>
+        <span class="fb-star" data-v="2" onclick="fbSetStar(2)" style="font-size:28px;cursor:pointer;opacity:.35;transition:opacity .15s,transform .15s">★</span>
+        <span class="fb-star" data-v="3" onclick="fbSetStar(3)" style="font-size:28px;cursor:pointer;opacity:.35;transition:opacity .15s,transform .15s">★</span>
+        <span class="fb-star" data-v="4" onclick="fbSetStar(4)" style="font-size:28px;cursor:pointer;opacity:.35;transition:opacity .15s,transform .15s">★</span>
+        <span class="fb-star" data-v="5" onclick="fbSetStar(5)" style="font-size:28px;cursor:pointer;opacity:.35;transition:opacity .15s,transform .15s">★</span>
+      </div>
+      <div id="fb-star-label" style="font-size:12px;color:var(--muted);margin-bottom:16px;min-height:16px"></div>
+
+      <textarea id="fb-text" placeholder="O que poderia ser melhor? O que você ama? Sugestão de feature?" style="width:100%;min-height:90px;resize:vertical;border-radius:8px;padding:12px;font-size:13px;margin-bottom:14px;background:var(--card2);border:1px solid var(--border);color:var(--text)"></textarea>
+
+      <button onclick="fbSubmit()" style="width:100%;padding:14px;background:linear-gradient(135deg,#1e3a5f,#1a5cba);color:#fff;border:none;border-radius:30px;font-size:14px;font-weight:700;cursor:pointer;transition:opacity .2s" onmouseenter="this.style.opacity='.85'" onmouseleave="this.style.opacity='1'">✨ Deixar Feedback</button>
+
+      <div id="fb-thanks" style="display:none;margin-top:16px;padding:12px;background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:8px;font-size:13px;color:#4ade80">✅ Obrigado! Seu feedback foi registrado.</div>
+    </div>
+  </div>
+</div>
+
 <!-- ===== CONFIGURAÇÕES ===== -->
 <div id="tab-config" class="tab-panel">
   <div class="page-header">
@@ -1677,9 +1983,9 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
             <div style="font-size:10px;color:var(--muted)">Padrão</div>
           </div>
           <div class="theme-option" data-theme="gray" onclick="setTheme('gray')" style="padding:14px;background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;text-align:center">
-            <div style="font-size:20px;margin-bottom:6px">⬛</div>
-            <div style="font-size:12px;font-weight:600">Inox</div>
-            <div style="font-size:10px;color:var(--muted)">Gray</div>
+            <div style="font-size:20px;margin-bottom:6px">🌿</div>
+            <div style="font-size:12px;font-weight:600">Sage</div>
+            <div style="font-size:10px;color:var(--muted)">Capturo</div>
           </div>
           <div class="theme-option" data-theme="blue" onclick="setTheme('blue')" style="padding:14px;background:var(--card2);border:1px solid var(--border);border-radius:var(--radius-sm);cursor:pointer;text-align:center">
             <div style="font-size:20px;margin-bottom:6px">🔵</div>
@@ -4869,6 +5175,90 @@ function radarAddProduct(keyword) {
   saveState();
   updateBadges();
   showToast('success', `✅ "${keyword.slice(0,30)}" adicionado ao Radar de Campanhas!`);
+}
+
+// ===================================================================
+// ===== MANUAL & FAQ ===============================================
+// ===================================================================
+
+const FAQ_DATA = [
+  { q: 'O Kronos funciona sem API Keys?', a: 'Sim. Garimpagem, Plataformas, GEO Intelligence, Copy Engine, IA VEKTOR (modo prompt), Calculadoras e Criador de Campanhas funcionam 100% offline, sem nenhuma chave. O Spy Radar (FB + YT) e a IA com resposta automática precisam das chaves.' },
+  { q: 'O token do Facebook expira?', a: 'Sim. Tokens do Graph Explorer padrão expiram em 60 dias. Para um token de longa duração (60 dias renováveis), use o processo de token de longa duração da Meta: vá em developers.facebook.com → Ferramentas → Access Token Debugger → clique em "Extend Access Token". Tokens de app não expiram.' },
+  { q: 'Precisa de conta de desenvolvedor no Facebook?', a: 'Basta ter uma conta Facebook normal. Acesse developers.facebook.com, aceite os termos, e você já consegue usar o Graph Explorer gratuitamente para gerar tokens de acesso à Ad Library. Não precisa criar um app nem passar por revisão.' },
+  { q: 'O Thunderbit Bridge funciona com qualquer site?', a: 'Sim. O Thunderbit pode raspar qualquer página. O Kronos tem templates específicos para 8 alvos (AdCombo, ClickBank, Hotmart, etc.) mas aceita JSON ou TSV de qualquer fonte. O normalizador genérico tenta mapear automaticamente as colunas por palavras-chave nos nomes dos campos.' },
+  { q: 'Por que o Thunderbit não funciona em arquivo local (file://)?', a: 'Browsers modernos bloqueiam acesso ao clipboard em páginas sem HTTPS por segurança. Para o Thunderbit Bridge funcionar, o Kronos precisa estar em HTTPS — ou seja, via GitHub Pages (grátis) ou qualquer servidor com SSL. Localmente via file:// todas as outras features funcionam, exceto o clipboard automático.' },
+  { q: 'O que é AR% e por que importa?', a: 'AR% (Approval Rate) é a porcentagem de pedidos COD que são efetivamente entregues e pagos. Em modelos COD (cash on delivery), o cliente paga na entrega — uma parte rejeita na hora da entrega. AR% 30% significa que 3 em cada 10 pedidos são pagos. AR 40%+ é considerado bom. Plataformas como AdCombo mostram o AR% por produto e por país.' },
+  { q: 'Qual a diferença entre CPS, CPA e COD?', a: 'CPS (Cost Per Sale): comissão percentual sobre o valor da venda. CPA (Cost Per Action): valor fixo por ação (geralmente uma venda ou lead). COD (Cash on Delivery): variante do CPA onde o cliente paga na entrega — o afiliado recebe quando o pedido é confirmado. COD elimina chargebacks e é o modelo dominante em países Tier 2/3.' },
+  { q: 'Meus dados ficam onde salvos?', a: 'Por padrão, tudo é salvo no localStorage do seu browser — fica no seu computador, offline, sem nenhum servidor. Se você configurar as credenciais do Supabase (em Configurações), os dados também são sincronizados na nuvem, permitindo acesso de qualquer dispositivo.' },
+  { q: 'Como funciona o score de oportunidade da Garimpagem?', a: 'O score (0–100) é calculado com base em 4 fatores: status do produto (Subindo/Hype = mais pontos), porcentagem nos EUA (quanto menor, menos competição = mais pontos), comissão (maior = mais pontos) e AR% para produtos COD. Produtos com score 80+ são candidatos fortes.' },
+  { q: 'Posso adicionar produtos que não estão na lista padrão?', a: 'Sim. Em Garimpagem, clique em "+ Produto" para adicionar manualmente. Você preenche nome, plataforma, nicho, comissão, AR%, e as notas. O score é calculado automaticamente. Produtos adicionados via Spy Radar ou Thunderbit entram como "Candidato" e você complementa os dados.' },
+  { q: 'Como usar o Criador de Campanhas com a API do Google Ads?', a: 'O Criador de Campanhas gera a estrutura completa de uma campanha (ad groups, headlines, descriptions, keywords) no formato compatível com a API Google Ads v18. Preencha os dados do produto, escolha o tipo de campanha e o sistema monta tudo. A integração direta com a API Google Ads está em desenvolvimento.' },
+  { q: 'O Kronos é gratuito?', a: 'O Kronos é um arquivo HTML standalone, desenvolvido como ferramenta proprietária. As APIs que ele usa (Facebook Ad Library, YouTube Data) são gratuitas dentro dos limites de uso. O único custo eventual é se você ultrapassar as quotas gratuitas das APIs (improvável no uso normal).' },
+];
+
+function renderFAQ() {
+  const el = document.getElementById('faq-list');
+  if (!el) return;
+  el.innerHTML = FAQ_DATA.map((item, i) => `
+    <div style="background:var(--card);border:1px solid var(--border);border-radius:9px;overflow:hidden">
+      <div onclick="faqToggle(${i})" style="padding:14px 18px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;user-select:none"
+        onmouseenter="this.style.background='var(--card2)'" onmouseleave="this.style.background=''">
+        <span style="font-size:13px;font-weight:600;color:var(--text1,var(--text));line-height:1.4">${item.q}</span>
+        <span id="faq-arrow-${i}" style="font-size:12px;color:var(--muted);flex-shrink:0;transition:transform .2s">▼</span>
+      </div>
+      <div id="faq-body-${i}" style="display:none;padding:0 18px 14px;font-size:13px;color:var(--text2);line-height:1.7;border-top:1px solid var(--border)">${item.a}</div>
+    </div>`).join('');
+}
+
+function faqToggle(i) {
+  const body = document.getElementById('faq-body-' + i);
+  const arrow = document.getElementById('faq-arrow-' + i);
+  if (!body) return;
+  const open = body.style.display !== 'none';
+  body.style.display = open ? 'none' : 'block';
+  if (arrow) arrow.style.transform = open ? '' : 'rotate(180deg)';
+}
+
+function manScroll(id) {
+  const el = document.getElementById(id);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ===== FEEDBACK =====
+let fbCurrentStar = 0;
+const FB_LABELS = ['', '😕 Precisa melhorar muito', '😐 Abaixo do esperado', '😊 Razoável', '😄 Muito bom!', '🤩 Incrível, amei!'];
+
+function fbSetStar(v) {
+  fbCurrentStar = v;
+  document.querySelectorAll('.fb-star').forEach(s => {
+    const sv = parseInt(s.getAttribute('data-v'));
+    s.style.opacity = sv <= v ? '1' : '.3';
+    s.style.color = sv <= v ? '#f59e0b' : '';
+    s.style.transform = sv === v ? 'scale(1.25)' : 'scale(1)';
+  });
+  const lbl = document.getElementById('fb-star-label');
+  if (lbl) lbl.textContent = FB_LABELS[v] || '';
+}
+
+function fbSubmit() {
+  const text = (document.getElementById('fb-text')?.value || '').trim();
+  if (!fbCurrentStar && !text) { showToast('warning', '⭐ Selecione uma nota ou escreva um comentário'); return; }
+  // Save locally
+  const feedbacks = JSON.parse(localStorage.getItem('kronos_feedbacks') || '[]');
+  feedbacks.push({ stars: fbCurrentStar, text, date: new Date().toISOString() });
+  localStorage.setItem('kronos_feedbacks', JSON.stringify(feedbacks));
+  // If Supabase is configured, push there too (fire and forget)
+  if (supaClient && currentUser) {
+    supaClient.from('kronos_feedback').insert({ user_id: currentUser.id, stars: fbCurrentStar, text, created_at: new Date().toISOString() }).then(() => {});
+  }
+  document.getElementById('fb-thanks').style.display = 'block';
+  document.getElementById('fb-text').value = '';
+  fbSetStar(0);
+  fbCurrentStar = 0;
+}
+
+function manualOnOpen() {
+  renderFAQ();
 }
 
 function radarOnOpen() {
