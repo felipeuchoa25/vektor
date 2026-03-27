@@ -1,8 +1,22 @@
 <!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║  KRONOS — Sistema de Inteligência para Afiliados Digitais        ║
+  ║  Desenvolvido por Felipe Uchoa — Todos os direitos reservados    ║
+  ║  © 2024–2025 Felipe Uchoa | felipelabat@hotmail.com              ║
+  ║  Código-fonte protegido. Reprodução não autorizada é proibida.   ║
+  ║  ID: KRN-4FFA5157D01994EB | Build: 2025-03                       ║
+  ╚══════════════════════════════════════════════════════════════════╝
+-->
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Felipe Uchoa">
+<meta name="copyright" content="© 2024-2025 Felipe Uchoa. Todos os direitos reservados.">
+<meta name="application-name" content="KRONOS by Felipe Uchoa">
+<meta name="generator" content="KRN-4FFA5157D01994EB">
+<!-- KRONOS:S1JPTk9TLUZlbGlwZS1VY2hvYS0yMDI0LVNpc3RlbWEtSW50ZWxpZ2VuY2lhLUFmaWxpYWRvcw== -->
 <title>KRONOS — Inteligência de Afiliados</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -459,11 +473,46 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 #sync-dot.syncing{background:#f59e0b;animation:pulse 1s infinite}
 #sync-dot.error{background:#ff4d6d}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+/* KRONOS © Felipe Uchoa 2024-2025 — KRN-4FFA5157D01994EB — Uso não autorizado é proibido */
+
+/* ── KronoAnalyze — iOS/Apple Design System ── */
+.ios-analyze-panel{background:linear-gradient(135deg,rgba(255,255,255,0.04) 0%,rgba(255,255,255,0.01) 100%);border:1px solid rgba(255,255,255,0.10);border-radius:16px;padding:0;overflow:hidden;margin-top:14px;font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text',system-ui,sans-serif;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.ios-analyze-header{display:flex;align-items:center;justify-content:space-between;padding:13px 18px;border-bottom:1px solid rgba(255,255,255,0.07)}
+.ios-analyze-title{font-size:11px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4)}
+.ios-scanning{display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(0,229,255,0.8)}
+.ios-scan-dot{width:6px;height:6px;border-radius:50%;background:#00e5ff;animation:ios-blink 1.2s ease-in-out infinite}
+@keyframes ios-blink{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.3;transform:scale(0.7)}}
+.ios-metrics-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:1px;background:rgba(255,255,255,0.06)}
+.ios-metric-card{background:rgba(13,17,38,0.85);padding:16px 18px;display:flex;flex-direction:column;gap:5px}
+.ios-metric-label{font-size:10px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.35)}
+.ios-metric-value{font-size:20px;font-weight:700;letter-spacing:-0.02em;color:#fff;line-height:1}
+.ios-metric-sub{font-size:10px;color:rgba(255,255,255,0.4);margin-top:2px}
+.ios-badge-age{display:inline-flex;align-items:center;gap:4px;padding:3px 10px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:0.04em}
+.ios-badge-green{background:rgba(52,211,153,0.15);color:#34d399;border:1px solid rgba(52,211,153,0.25)}
+.ios-badge-yellow{background:rgba(251,191,36,0.15);color:#fbbf24;border:1px solid rgba(251,191,36,0.25)}
+.ios-badge-red{background:rgba(248,113,113,0.15);color:#f87171;border:1px solid rgba(248,113,113,0.25)}
+.ios-keywords-section{padding:14px 18px}
+.ios-keywords-title{font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:10px;display:flex;align-items:center;gap:6px}
+.ios-kw-chips{display:flex;flex-wrap:wrap;gap:6px}
+.ios-kw-chip{display:inline-flex;align-items:center;gap:4px;padding:5px 11px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:20px;font-size:11px;color:rgba(255,255,255,0.75);cursor:pointer;transition:all 0.18s;font-family:inherit}
+.ios-kw-chip:hover{background:rgba(0,229,255,0.1);border-color:rgba(0,229,255,0.3);color:#00e5ff}
+.ios-kw-chip.added{background:rgba(52,211,153,0.12);border-color:rgba(52,211,153,0.3);color:#34d399}
+.ios-actions-row{display:flex;gap:8px;padding:14px 18px;padding-top:0;flex-wrap:wrap}
+.ios-action-btn{display:flex;align-items:center;gap:6px;padding:7px 14px;border-radius:10px;font-size:11px;font-weight:600;cursor:pointer;border:none;transition:all 0.2s;font-family:inherit;letter-spacing:0.01em}
+.ios-action-similarweb{background:rgba(255,102,0,0.12);color:#ff9944;border:1px solid rgba(255,102,0,0.2)}
+.ios-action-similarweb:hover{background:rgba(255,102,0,0.2);border-color:rgba(255,102,0,0.4)}
+.ios-action-wayback{background:rgba(99,102,241,0.12);color:#a5b4fc;border:1px solid rgba(99,102,241,0.2)}
+.ios-action-wayback:hover{background:rgba(99,102,241,0.2);border-color:rgba(99,102,241,0.4)}
+.ios-shimmer{background:linear-gradient(90deg,rgba(255,255,255,0.04) 25%,rgba(255,255,255,0.08) 50%,rgba(255,255,255,0.04) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:6px;height:20px}
+@keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
 </style>
 <!-- Supabase SDK -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 </head>
 <body data-theme="dark">
+
+<!-- KRONOS authorship watermark — do not remove -->
+<span aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;pointer-events:none;opacity:0" data-krn="KRN-4FFA5157D01994EB" data-author="Felipe Uchoa" data-year="2025">KRONOS © 2024-2025 Felipe Uchoa felipelabat@hotmail.com</span>
 
 <!-- LOGIN SCREEN -->
 <div id="login-screen">
@@ -834,6 +883,78 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
     </div>
   </div>
 
+  <!-- Ciclo de Vida + Checklist -->
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+    <!-- Ciclo de Vida -->
+    <div class="card">
+      <div class="card-title">🔄 CICLO DE VIDA DO PRODUTO VENCEDOR</div>
+      <div style="font-size:12px;color:var(--text2);margin-bottom:14px">Onde o produto está define se você está cedo, no timing certo ou atrasado.</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="background:rgba(0,214,143,0.08);border:1px solid rgba(0,214,143,0.25);border-left:3px solid var(--green);border-radius:8px;padding:10px 12px">
+          <div style="font-size:11px;font-weight:700;color:var(--green);margin-bottom:3px">① NASCIMENTO — Early Stage</div>
+          <div style="font-size:11px;color:var(--text2)">MaxBounty · CrakRevenue · AdCombo · OfferVault</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:3px">Produto cru, funil sendo testado. Risco alto, margem alta.</div>
+        </div>
+        <div style="font-size:18px;color:var(--muted);text-align:center;line-height:1">↓</div>
+        <div style="background:rgba(255,204,0,0.08);border:1px solid rgba(255,204,0,0.25);border-left:3px solid var(--yellow);border-radius:8px;padding:10px 12px">
+          <div style="font-size:11px;font-weight:700;color:var(--yellow);margin-bottom:3px">② VALIDAÇÃO — Timing Ideal ⭐</div>
+          <div style="font-size:11px;color:var(--text2)">ClickBank · Digistore24 · JVZoo · WarriorPlus</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:3px">VSL madura, afiliados entrando. Momento certo de escalar.</div>
+        </div>
+        <div style="font-size:18px;color:var(--muted);text-align:center;line-height:1">↓</div>
+        <div style="background:rgba(255,45,85,0.08);border:1px solid rgba(255,45,85,0.2);border-left:3px solid var(--red);border-radius:8px;padding:10px 12px">
+          <div style="font-size:11px;font-weight:700;color:var(--red);margin-bottom:3px">③ MAINSTREAM — Atrasado</div>
+          <div style="font-size:11px;color:var(--text2)">Hotmart · Kiwify · Braip · Eduzz</div>
+          <div style="font-size:10px;color:var(--muted);margin-top:3px">Se chegou aqui sem estar dentro antes, CPC já subiu.</div>
+        </div>
+      </div>
+    </div>
+    <!-- Checklist de Validação -->
+    <div class="card">
+      <div class="card-title">✅ CHECKLIST DE VALIDAÇÃO — 5 Sinais de Produto Vencedor</div>
+      <div style="font-size:12px;color:var(--text2);margin-bottom:14px">Se marcar 4+ pontos, produto está em fase de explosão.</div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
+          <input type="checkbox" id="chk1" style="margin-top:2px;accent-color:var(--accent)">
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--text)">🔁 Criativo repetido por 3–5+ dias</div>
+            <div style="font-size:11px;color:var(--muted)">Anúncio ativo = dinheiro entrando. Ninguém mantém ad perdendo.</div>
+          </div>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
+          <input type="checkbox" id="chk2" style="margin-top:2px;accent-color:var(--accent)">
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--text)">🌎 Rodando em Tier 1 (US/UK/CA/AU)</div>
+            <div style="font-size:11px;color:var(--muted)">Mercado mais exigente. Se funciona aqui, funciona em qualquer lugar.</div>
+          </div>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
+          <input type="checkbox" id="chk3" style="margin-top:2px;accent-color:var(--accent)">
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--text)">📄 Landing page simples (não perfeita)</div>
+            <div style="font-size:11px;color:var(--muted)">Página polida demais = produto antigo sendo reaquecido.</div>
+          </div>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
+          <input type="checkbox" id="chk4" style="margin-top:2px;accent-color:var(--accent)">
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--text)">💥 Promessa forte (dor clara e específica)</div>
+            <div style="font-size:11px;color:var(--muted)">Nicho com dor aguda = conversão alta mesmo com copy ruim.</div>
+          </div>
+        </label>
+        <label style="display:flex;align-items:flex-start;gap:10px;cursor:pointer">
+          <input type="checkbox" id="chk5" style="margin-top:2px;accent-color:var(--accent)">
+          <div>
+            <div style="font-size:12px;font-weight:600;color:var(--text)">🔀 Variações do mesmo ângulo rodando</div>
+            <div style="font-size:11px;color:var(--muted)">Múltiplas variações = anunciante escalando ativamente com lucro.</div>
+          </div>
+        </label>
+      </div>
+      <div id="chk-result" style="margin-top:14px;padding:10px 12px;border-radius:8px;font-size:12px;font-weight:600;display:none"></div>
+      <button onclick="avaliarChecklist()" class="btn btn-secondary btn-sm" style="margin-top:10px;width:100%">Avaliar produto</button>
+    </div>
+  </div>
+
   <!-- Spy Keywords -->
   <div class="card mb-20">
     <div class="card-title">🕵️ PALAVRAS-CHAVE DE ESPIONAGEM — Por Nicho</div>
@@ -956,9 +1077,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 
   <div class="sub-tabs">
     <div class="sub-tab active" onclick="showPlatTab('ocultas',this)">🕵️ Ocultas (9)</div>
-    <div class="sub-tab" onclick="showPlatTab('conhecidas',this)">📋 Conhecidas (17)</div>
+    <div class="sub-tab" onclick="showPlatTab('conhecidas',this)">📋 Conhecidas (27)</div>
     <div class="sub-tab" onclick="showPlatTab('brasileiras',this)">🇧🇷 Brasileiras (7)</div>
     <div class="sub-tab" onclick="showPlatTab('cod',this)">💰 Especialistas COD (6)</div>
+    <div class="sub-tab" onclick="showPlatTab('garimpo',this)">🔎 Garimpo (7)</div>
   </div>
 
   <div id="plat-ocultas">
@@ -979,6 +1101,16 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
   </div>
   <div id="plat-cod" style="display:none">
     <div class="platform-grid" id="plat-cod-grid"></div>
+  </div>
+  <div id="plat-garimpo" style="display:none">
+    <div style="background:linear-gradient(135deg,rgba(0,229,255,0.08),rgba(0,229,255,0.03));border:1px solid rgba(0,229,255,0.25);border-left:3px solid var(--accent);border-radius:10px;padding:14px 18px;margin-bottom:18px;display:flex;align-items:flex-start;gap:12px">
+      <span style="font-size:20px;flex-shrink:0">🔎</span>
+      <div>
+        <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);font-weight:700;margin-bottom:4px">Ferramentas de Garimpo — Acesso Livre</div>
+        <div style="font-size:13px;color:var(--text2);line-height:1.5">Esses não são redes de afiliados — são <strong style="color:var(--text)">agregadores</strong>. Mostram o que está rodando em outras redes. Use para identificar produtos antes de explodirem. Combinados, substituem qualquer spy tool paga.</div>
+      </div>
+    </div>
+    <div class="platform-grid" id="plat-garimpo-grid"></div>
   </div>
 </div>
 
@@ -1576,6 +1708,49 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
         </div>
       </div>
       <button class="btn btn-primary" onclick="showTab('config')" style="width:100%">⚙️ Ir para Configurações e colar as chaves</button>
+    </div>
+  </div>
+
+  <!-- Ads Libraries — Acesso Manual Gratuito -->
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:20px">
+    <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);font-weight:700;margin-bottom:4px">📚 BIBLIOTECAS DE ANÚNCIOS — Acesso 100% Gratuito e Aberto</div>
+    <div style="font-size:12px;color:var(--text2);margin-bottom:14px">Use enquanto o Radar não está configurado — ou em paralelo para validar o que você encontrar. Não precisam de login.</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px">
+      <a href="https://www.facebook.com/ads/library/?ad_type=all&country=US" target="_blank" style="display:flex;align-items:center;gap:10px;background:rgba(59,130,246,0.08);border:1px solid rgba(59,130,246,0.25);border-radius:8px;padding:12px 14px;text-decoration:none;transition:all 0.18s">
+        <span style="font-size:22px">📘</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:#60a5fa">Meta Ads Library</div>
+          <div style="font-size:10px;color:var(--muted)">Copy · Data de início · País</div>
+        </div>
+      </a>
+      <a href="https://ads.google.com/transparency/home" target="_blank" style="display:flex;align-items:center;gap:10px;background:rgba(234,67,53,0.08);border:1px solid rgba(234,67,53,0.25);border-radius:8px;padding:12px 14px;text-decoration:none;transition:all 0.18s">
+        <span style="font-size:22px">🔴</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:#f87171">Google Transparency</div>
+          <div style="font-size:10px;color:var(--muted)">Search · Display · YouTube</div>
+        </div>
+      </a>
+      <a href="https://library.tiktok.com/ads" target="_blank" style="display:flex;align-items:center;gap:10px;background:rgba(0,0,0,0.2);border:1px solid rgba(255,255,255,0.12);border-radius:8px;padding:12px 14px;text-decoration:none;transition:all 0.18s">
+        <span style="font-size:22px">🎵</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--text)">TikTok Ads Library</div>
+          <div style="font-size:10px;color:var(--muted)">Viral · Vídeo · UGC</div>
+        </div>
+      </a>
+      <a href="https://cbsnooper.com" target="_blank" style="display:flex;align-items:center;gap:10px;background:rgba(0,229,255,0.06);border:1px solid rgba(0,229,255,0.2);border-radius:8px;padding:12px 14px;text-decoration:none;transition:all 0.18s">
+        <span style="font-size:22px">🔍</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--accent)">CBSnooper</div>
+          <div style="font-size:10px;color:var(--muted)">Gravity · Afiliados · Trend</div>
+        </div>
+      </a>
+      <a href="https://trends.google.com/trends/explore?geo=US" target="_blank" style="display:flex;align-items:center;gap:10px;background:rgba(0,214,143,0.06);border:1px solid rgba(0,214,143,0.2);border-radius:8px;padding:12px 14px;text-decoration:none;transition:all 0.18s">
+        <span style="font-size:22px">📈</span>
+        <div>
+          <div style="font-size:12px;font-weight:700;color:var(--green)">Google Trends</div>
+          <div style="font-size:10px;color:var(--muted)">Demanda · Subindo/Caindo</div>
+        </div>
+      </a>
     </div>
   </div>
 
@@ -2333,6 +2508,48 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
   <div class="page-header">
     <h2><span>🏆</span> KronoRanking</h2>
     <p>Produtos mais escalados do mercado em tempo real</p>
+  </div>
+
+  <!-- Score Formula Card -->
+  <div style="background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:20px">
+    <div style="font-size:11px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);font-weight:700;margin-bottom:12px">⚙️ FÓRMULA DE SCORE — Como o ranking é calculado</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:12px">
+      <div style="background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;text-align:center;min-width:120px">
+        <div style="font-size:18px;font-weight:800;color:var(--green)">30%</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:2px">Gravidade</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:2px">Afiliados vendendo ativamente</div>
+      </div>
+      <div style="font-size:20px;color:var(--muted)">+</div>
+      <div style="background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;text-align:center;min-width:120px">
+        <div style="font-size:18px;font-weight:800;color:var(--accent)">25%</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:2px">Vol. Busca</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:2px">Demanda orgânica real</div>
+      </div>
+      <div style="font-size:20px;color:var(--muted)">+</div>
+      <div style="background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;text-align:center;min-width:120px">
+        <div style="font-size:18px;font-weight:800;color:#f59e0b">25%</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:2px">Tráfego Site</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:2px">Escala de anúncios ativa</div>
+      </div>
+      <div style="font-size:20px;color:var(--muted)">+</div>
+      <div style="background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:10px 14px;text-align:center;min-width:120px">
+        <div style="font-size:18px;font-weight:800;color:var(--accent2)">20%</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:2px">Comissão</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:2px">Lucratividade por venda</div>
+      </div>
+      <div style="font-size:20px;color:var(--muted)">=</div>
+      <div style="background:linear-gradient(135deg,rgba(0,229,255,0.15),rgba(124,58,237,0.1));border:1px solid rgba(0,229,255,0.3);border-radius:8px;padding:10px 14px;text-align:center;min-width:120px">
+        <div style="font-size:18px;font-weight:800;color:var(--accent)">Score</div>
+        <div style="font-size:11px;color:var(--text2);margin-top:2px">0–100 pts</div>
+        <div style="font-size:10px;color:var(--muted);margin-top:2px">Potencial de escala</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;font-size:11px;color:var(--text2);flex-wrap:wrap">
+      <span style="background:rgba(0,214,143,0.12);color:var(--green);padding:3px 8px;border-radius:4px;font-weight:600">80+ 🔥 Escalar</span>
+      <span style="background:rgba(255,204,0,0.12);color:var(--yellow);padding:3px 8px;border-radius:4px;font-weight:600">60–80 ⚠️ Testar</span>
+      <span style="background:rgba(255,45,85,0.12);color:var(--red);padding:3px 8px;border-radius:4px;font-weight:600">&lt;60 ❌ Ignorar</span>
+      <span style="margin-left:auto;color:var(--muted)">Produto com Gravidade alta + Trend subindo = timing ideal de entrada</span>
+    </div>
   </div>
 
   <div style="display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap">
@@ -3129,11 +3346,57 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
       <div class="form-row">
         <div class="form-group">
           <label class="form-label">Nome do Produto *</label>
-          <input type="text" id="mp-name" placeholder="Ex: GlucoTrust">
+          <input type="text" id="mp-name" placeholder="Ex: GlucoTrust" onblur="kronoSuggestKW(this.value)">
         </div>
         <div class="form-group">
           <label class="form-label">URL do Produto</label>
-          <input type="url" id="mp-url" placeholder="glucotrust.com">
+          <input type="url" id="mp-url" placeholder="glucotrust.com" onblur="kronoScanURL(this.value)">
+        </div>
+      </div>
+
+      <!-- KronoAnalyze Panel — iOS/Apple style -->
+      <div id="mp-analyze-panel" style="display:none">
+        <div class="ios-analyze-panel">
+          <div class="ios-analyze-header">
+            <span class="ios-analyze-title">⚡ KronoAnalyze</span>
+            <span class="ios-scanning" id="mp-scan-status">
+              <span class="ios-scan-dot"></span> Analisando...
+            </span>
+          </div>
+          <!-- Metrics row -->
+          <div class="ios-metrics-row" id="mp-metrics-row">
+            <div class="ios-metric-card">
+              <span class="ios-metric-label">Domain Age</span>
+              <div class="ios-shimmer" style="width:80px"></div>
+            </div>
+            <div class="ios-metric-card">
+              <span class="ios-metric-label">1º Snapshot</span>
+              <div class="ios-shimmer" style="width:70px"></div>
+            </div>
+            <div class="ios-metric-card">
+              <span class="ios-metric-label">Sinal</span>
+              <div class="ios-shimmer" style="width:60px"></div>
+            </div>
+          </div>
+          <!-- Keyword suggestions -->
+          <div class="ios-keywords-section" id="mp-kw-section" style="display:none">
+            <div class="ios-keywords-title">
+              <span>🔍</span> Spy Keywords — Google Suggest
+              <span style="color:rgba(255,255,255,0.2);font-weight:400;text-transform:none;letter-spacing:0">Clique para copiar ao SpyRadar</span>
+            </div>
+            <div class="ios-kw-chips" id="mp-kw-chips"></div>
+          </div>
+          <!-- Action buttons -->
+          <div class="ios-actions-row" id="mp-action-row" style="display:none">
+            <button class="ios-action-btn ios-action-similarweb" id="mp-btn-sw" onclick="kronoOpenSW()">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+              Ver no SimilarWeb
+            </button>
+            <button class="ios-action-btn ios-action-wayback" id="mp-btn-wb" onclick="kronoOpenWayback()">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M12 7v5l4 2"/></svg>
+              Wayback Machine
+            </button>
+          </div>
         </div>
       </div>
       <div class="form-row-3">
@@ -3330,10 +3593,35 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:16px;heigh
 <script>
 // ===== CONSTANTS & DATA =====
 
+/**
+ * KRONOS — Sistema de Inteligência para Afiliados Digitais
+ * @author    Felipe Uchoa <felipelabat@hotmail.com>
+ * @copyright © 2024–2025 Felipe Uchoa. Todos os direitos reservados.
+ * @license   Proprietário — uso não autorizado é proibido por lei.
+ * @build     KRN-4FFA5157D01994EB
+ * @signed    4ffa5157d01994ebcb7165ae8907049901f3da849d1bf54d1ebdcb10f7275c5f
+ */
+const KRONOS_SIGNATURE = {
+  author:    'Felipe Uchoa',
+  email:     'felipelabat@hotmail.com',
+  product:   'KRONOS — Sistema de Inteligência para Afiliados Digitais',
+  build:     'KRN-4FFA5157D01994EB',
+  hash:      '4ffa5157d01994ebcb7165ae8907049901f3da849d1bf54d1ebdcb10f7275c5f',
+  copyright: '© 2024-2025 Felipe Uchoa. Reprodução não autorizada proibida.',
+  verify:    () => console.info('%cKRONOS%c © Felipe Uchoa — Build KRN-4FFA5157D01994EB', 'color:#00e5ff;font-weight:bold;font-size:14px','color:#888;font-size:11px')
+};
+// Exibe autoria nos DevTools ao abrir o console
+if (typeof console !== 'undefined') {
+  KRONOS_SIGNATURE.verify();
+}
+
 const STATUS_COLORS = {
   'Candidato': '#6b7099', 'Subindo': '#00d68f', 'Escalando': '#00e5ff',
   'Hype': '#ffcc00', 'Saturado': '#ff6b00', 'Morto': '#ff2d55'
 };
+
+// Global state vars (declared early to avoid temporal dead zone)
+let selectedAngle = null;
 
 // ===== SEED YT CHANNELS (Felipe's monitored channels) =====
 const SEED_YT_CHANNELS = [
@@ -3416,6 +3704,16 @@ const PLATFORMS = {
     {name:'PeerFly',url:'peerfly.com',type:'CPA',niches:['nutra','gaming','finance'],competition:45,tip:'CPA network sólida. Menor que as gigantes.',tag:''},
     {name:'W4',url:'w4.com',type:'CPA',niches:['nutra','health','beauty'],competition:40,tip:'Especialista em saúde e beleza. Menos conhecida.',tag:'🕵️ Oculta'},
     {name:'Mobidea',url:'mobidea.com',type:'CPA',niches:['mobile','dating','nutra'],competition:40,tip:'Forte em tráfego mobile e dating.',tag:''},
+    {name:'MaxBounty',url:'maxbounty.com',type:'CPA',niches:['nutra','finance','gaming','dating'],competition:50,tip:'Uma das maiores CPA networks do mundo. Onde produto vencedor nasce antes de chegar ao ClickBank. Alta qualidade de aprovação.',tag:'🔥 CPA Top'},
+    {name:'CrakRevenue',url:'crakrevenue.com',type:'CPA',niches:['dating','nutra','adult','crypto'],competition:45,tip:'CPA network agressiva. Muito usada em nutra e dating. Produtos aqui frequentemente escalam depois para Tier 1.',tag:'⚡ CPA'},
+    {name:'MarketHealth',url:'markethealth.com',type:'CPS/CPA',niches:['nutra','health','beauty','skincare'],competition:50,tip:'Especialista vertical saúde/beleza. Produtos exclusivos de alta qualidade. Menos conhecida que ClickBank mas muito lucrativa.',tag:'💊 Health'},
+    {name:'GiddyUp',url:'giddyup.com',type:'CPS',niches:['ecommerce','health','fitness','lifestyle'],competition:40,tip:'Performance marketing para e-commerce premium. Marcas de alta qualidade. Comissões competitivas. Menor saturação.',tag:'🛒 Ecomm'},
+    {name:'Amazon Associates',url:'affiliate-program.amazon.com',type:'CPS',niches:['ecommerce','tech','books','home'],competition:85,tip:'Volume absurdo, comissões baixas (1-10%). Útil para validar demanda de produto físico. Taxa de conversão altíssima pela confiança da marca.',tag:'📦 Volume'},
+    {name:'eBay Partner Network',url:'partnernetwork.ebay.com',type:'CPS',niches:['ecommerce','eletrônicos','colecionáveis'],competition:60,tip:'Alta conversão em eletrônicos e itens únicos. Menos concorrência que Amazon Associates. Comissão por categoria.',tag:''},
+    {name:'TradeDoubler',url:'tradedoubler.com',type:'CPS',niches:['ecommerce','travel','finance','fashion'],competition:45,tip:'Forte na Europa. Similar ao Awin/CJ mas menos explorado por afiliados BR. Bom para Tier 2 europeu.',tag:'🇪🇺 Europa'},
+    {name:'Travelpayouts',url:'travelpayouts.com',type:'CPS',niches:['travel','hotels','flights','car rental'],competition:35,tip:'Vertical viagens exclusivo. Alta sazonalidade = janelas de oportunidade. Nicho sub-explorado por afiliados nutra.',tag:'✈️ Viagens'},
+    {name:'Perform[cb]',url:'performcb.com',type:'CPA',niches:['nutra','finance','dating','mobile'],competition:55,tip:'Antes Clickbooth. CPA network premium com compliance rigoroso. Produtos aqui têm funil validado. Acesso por convite.',tag:'🔐 Premium'},
+    {name:'Indoleads',url:'indoleads.com',type:'CPA',niches:['ecommerce','finance','travel','mobile'],competition:25,tip:'Especialista em mercados asiáticos. Índia, Indonésia, Tailândia. Baixíssima competição de afiliados ocidentais.',tag:'🌏 Ásia'},
   ],
   brasileiras: [
     {name:'Hotmart',url:'hotmart.com',type:'CPS',niches:['cursos','digital','fitness','mente'],competition:65,tip:'Líder absoluta no Brasil. Maior catálogo de infoprodutos do país. Comissões até 80%.',tag:'🏆 Líder BR'},
@@ -3425,6 +3723,15 @@ const PLATFORMS = {
     {name:'Monetizze',url:'monetizze.com.br',type:'CPS',niches:['cursos','digital','nutra','saúde'],competition:45,tip:'Forte em nutra e saúde digital. Recorrência. Boa reputação com afiliados.',tag:'🇧🇷 BR'},
     {name:'Kirvano',url:'kirvano.com',type:'CPS',niches:['cursos','digital'],competition:35,tip:'Plataforma nova e em crescimento. Menor competição. Foco em infoprodutores BR.',tag:'🆕 Nova'},
     {name:'Cakto',url:'cakto.com.br',type:'CPS',niches:['cursos','digital','assinaturas'],competition:30,tip:'Especialista em produtos de assinatura e membership. Recorrência garantida.',tag:'🔄 Recorrência'},
+  ],
+  garimpo: [
+    {name:'CBSnooper',url:'cbsnooper.com',type:'Agregador',niches:['ClickBank','nutra','digital','fitness'],competition:0,tip:'Melhor fonte primária gratuita. Mostra produtos ClickBank com gravity, recorrência, categoria e tendência. HTML aberto — sem login. Use como ponto de partida obrigatório.',tag:'🔓 Aberto'},
+    {name:'GuruMedia',url:'gurumedia.info',type:'Agregador',niches:['CPA','nutra','COD','global'],competition:0,tip:'Complementar ao CBSnooper. Mostra ofertas CPA de múltiplas redes. 100% aberto. Boa para cruzar dados e validar o que está rodando em paralelo.',tag:'🔓 Aberto'},
+    {name:'CBEngine',url:'cbengine.com',type:'Agregador',niches:['ClickBank','nutra','digital'],competition:0,tip:'Similar ao CBSnooper. Dados de gravity e ranking ClickBank. Quase todo aberto. Use para double-check de produtos encontrados no CBSnooper.',tag:'🔓 Aberto'},
+    {name:'OfferVault',url:'offervault.com',type:'Agregador',niches:['CPA','multi-rede','nutra','finance'],competition:0,tip:'Agrega ofertas de dezenas de redes CPA. Pede cadastro para detalhes, mas listagem parcial é aberta. Essencial para descobrir produto em fase early stage antes de chegar ao ClickBank.',tag:'🔐 Cadastro'},
+    {name:'Affbank',url:'affbank.com',type:'Agregador',niches:['CPA','nutra','dating','finance'],competition:0,tip:'Banco de ofertas multi-rede. Mostra pouco sem login, mas o que mostra já é suficiente para validar se produto existe e está ativo. Cadastro gratuito.',tag:'🔐 Cadastro'},
+    {name:'Odigger',url:'odigger.com',type:'Agregador',niches:['CPA','nutra','multi-rede'],competition:0,tip:'Buscador de ofertas CPA. Acesso parcial aberto. Bom para confirmar se uma oferta específica existe em múltiplas redes (sinal de validação).',tag:'🔓 Parcial'},
+    {name:'Affplus',url:'affplus.com',type:'Agregador',niches:['nutra','CPA','multi-rede'],competition:0,tip:'Agregador focado em nutra. Menos conhecido que OfferVault mas mais específico. Use quando o produto é health/nutra para ver em quais redes está ativo.',tag:'🔓 Aberto'},
   ],
   cod: [
     {name:'krak-medica.pl',url:'krak-medica.pl',type:'COD',niches:['nutra','health'],competition:10,tip:'Plataforma ultra-específica Europa Leste. Pouquíssimos afiliados internacionais. CPC a partir de $0.03.',tag:'🕵️ Ultra-Oculta'},
@@ -3701,8 +4008,8 @@ function loadState() {
       state.financeChannels = parsed.financeChannels || state.financeChannels;
     }
     // Load settings into form
-    if (state.settings.serpApiKey) document.getElementById('cfg-serpapi').value = state.settings.serpApiKey;
-    if (state.settings.claudeApiKey) document.getElementById('cfg-claude').value = state.settings.claudeApiKey;
+    if (state.settings.serpApiKey && document.getElementById('cfg-serpapi')) document.getElementById('cfg-serpapi').value = state.settings.serpApiKey;
+    if (state.settings.claudeApiKey && document.getElementById('cfg-claude')) document.getElementById('cfg-claude').value = state.settings.claudeApiKey;
     if (state.settings.ytApiKey && document.getElementById('cfg-ytapi')) document.getElementById('cfg-ytapi').value = state.settings.ytApiKey;
     if (state.settings.fbToken && document.getElementById('cfg-fbtoken')) document.getElementById('cfg-fbtoken').value = state.settings.fbToken;
     if (state.settings.theme) document.body.setAttribute('data-theme', state.settings.theme);
@@ -3897,6 +4204,29 @@ function openSpyYT() {
   window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(kw)}`, '_blank');
 }
 
+function avaliarChecklist() {
+  const checks = ['chk1','chk2','chk3','chk4','chk5'];
+  const marcados = checks.filter(id => document.getElementById(id).checked).length;
+  const el = document.getElementById('chk-result');
+  el.style.display = 'block';
+  if (marcados >= 4) {
+    el.style.background = 'rgba(0,214,143,0.12)';
+    el.style.border = '1px solid rgba(0,214,143,0.3)';
+    el.style.color = 'var(--green)';
+    el.textContent = `🔥 ${marcados}/5 pontos — PRODUTO EM FASE DE EXPLOSÃO. Entre agora.`;
+  } else if (marcados >= 2) {
+    el.style.background = 'rgba(255,204,0,0.1)';
+    el.style.border = '1px solid rgba(255,204,0,0.3)';
+    el.style.color = 'var(--yellow)';
+    el.textContent = `⚠️ ${marcados}/5 pontos — Produto promissor mas ainda validando. Monitore.`;
+  } else {
+    el.style.background = 'rgba(255,45,85,0.1)';
+    el.style.border = '1px solid rgba(255,45,85,0.2)';
+    el.style.color = 'var(--red)';
+    el.textContent = `❌ ${marcados}/5 pontos — Sinais fracos. Não entre ainda. Aguarde ou descarte.`;
+  }
+}
+
 // ===== PRODUCT CRUD =====
 function openAddProduct() {
   document.getElementById('modal-product-title').textContent = 'Adicionar Produto';
@@ -3909,6 +4239,7 @@ function openAddProduct() {
   document.getElementById('mp-niche').value = 'Libido';
   document.getElementById('mp-type').value = 'CPS';
   document.getElementById('mp-status').value = 'Candidato';
+  resetAnalyzePanel();
   openModal('modal-product');
 }
 
@@ -3928,6 +4259,7 @@ function editProduct(id) {
   document.getElementById('mp-searchvol').value = p.searchVol || '';
   document.getElementById('mp-us-percent').value = p.usPercent || '';
   document.getElementById('mp-notes').value = p.notes || '';
+  resetAnalyzePanel();
   openModal('modal-product');
 }
 
@@ -3978,6 +4310,156 @@ function deleteProduct(id) {
 function toggleFav(id) {
   const p = state.products.find(x => x.id === id);
   if (p) { p.favorite = !p.favorite; saveState(); renderGarimpagem(); renderDashboard(); updateSidebarCounts(); }
+}
+
+// ── KronoAnalyze — Domain Age + Google Suggest + SimilarWeb ──
+let _kronoLastDomain = '';
+let _kronoLastName = '';
+
+function _kronoCleanDomain(input) {
+  if (!input) return '';
+  input = input.trim();
+  if (!input.startsWith('http')) input = 'https://' + input;
+  try { return new URL(input).hostname.replace(/^www\./, ''); }
+  catch(e) { return input.replace(/https?:\/\//,'').replace(/^www\./,'').split('/')[0]; }
+}
+
+async function kronoScanURL(rawUrl) {
+  const domain = _kronoCleanDomain(rawUrl);
+  if (!domain || domain === _kronoLastDomain) return;
+  _kronoLastDomain = domain;
+
+  const panel = document.getElementById('mp-analyze-panel');
+  panel.style.display = 'block';
+
+  // Restore shimmer state
+  document.getElementById('mp-scan-status').innerHTML = '<span class="ios-scan-dot"></span> Analisando domínio...';
+  document.getElementById('mp-metrics-row').innerHTML = `
+    <div class="ios-metric-card"><span class="ios-metric-label">Domain Age</span><div class="ios-shimmer" style="width:80px;margin-top:6px"></div></div>
+    <div class="ios-metric-card"><span class="ios-metric-label">1º Snapshot</span><div class="ios-shimmer" style="width:70px;margin-top:6px"></div></div>
+    <div class="ios-metric-card"><span class="ios-metric-label">Sinal</span><div class="ios-shimmer" style="width:60px;margin-top:6px"></div></div>`;
+  document.getElementById('mp-action-row').style.display = 'none';
+
+  try {
+    const res = await fetch(`https://archive.org/wayback/available?url=${domain}`);
+    const data = await res.json();
+    const snap = data?.archived_snapshots?.closest;
+
+    let ageHtml, firstSeenHtml, signalHtml;
+
+    if (snap && snap.timestamp) {
+      const ts = snap.timestamp; // "20150312183510"
+      const y = ts.substring(0,4), m = ts.substring(4,6), d = ts.substring(6,8);
+      const firstDate = new Date(parseInt(y), parseInt(m)-1, parseInt(d));
+      const months = Math.floor((Date.now() - firstDate.getTime()) / (1000*60*60*24*30.44));
+      const years = (months / 12).toFixed(1);
+
+      let badgeClass = 'ios-badge-red', badgeText = 'Novo', signalColor = '#f87171';
+      if (months >= 24) { badgeClass = 'ios-badge-green'; badgeText = 'Veterano'; signalColor = '#34d399'; }
+      else if (months >= 6) { badgeClass = 'ios-badge-yellow'; badgeText = 'Validando'; signalColor = '#fbbf24'; }
+
+      ageHtml = `<span class="ios-metric-value">${months < 12 ? months+'m' : years+'a'}</span><span class="ios-metric-sub">${months} meses no ar</span>`;
+      firstSeenHtml = `<span class="ios-metric-value" style="font-size:14px">${d}/${m}/${y}</span><span class="ios-metric-sub">Primeiro registro</span>`;
+      signalHtml = `<span class="ios-badge-age ${badgeClass}">${badgeText}</span><span class="ios-metric-sub" style="margin-top:6px">${months >= 6 ? 'Produto com histórico' : 'Monitorar mais'}</span>`;
+    } else {
+      ageHtml = `<span class="ios-metric-value" style="font-size:13px;color:rgba(255,255,255,0.3)">—</span><span class="ios-metric-sub">Sem registro</span>`;
+      firstSeenHtml = `<span class="ios-metric-value" style="font-size:13px;color:rgba(255,255,255,0.3)">—</span>`;
+      signalHtml = `<span class="ios-badge-age ios-badge-red">Não rastreado</span>`;
+    }
+
+    document.getElementById('mp-metrics-row').innerHTML = `
+      <div class="ios-metric-card">${ageHtml.replace('<span class="ios-metric-label">Domain Age</span>','')}<span class="ios-metric-label">Domain Age</span>${ageHtml.includes('ios-metric-value') ? '' : ''}</div>
+      <div class="ios-metric-card">${firstSeenHtml.replace('<span class="ios-metric-label">1º Snapshot</span>','')}<span class="ios-metric-label">1º Snapshot</span></div>
+      <div class="ios-metric-card">${signalHtml.replace('<span class="ios-metric-label">Sinal</span>','')}<span class="ios-metric-label">Sinal</span></div>`;
+
+    // Rebuild properly
+    document.getElementById('mp-metrics-row').innerHTML = `
+      <div class="ios-metric-card">
+        <span class="ios-metric-label">Domain Age</span>
+        ${ageHtml}
+      </div>
+      <div class="ios-metric-card">
+        <span class="ios-metric-label">1º Snapshot</span>
+        ${firstSeenHtml}
+      </div>
+      <div class="ios-metric-card">
+        <span class="ios-metric-label">Sinal</span>
+        <div style="margin-top:4px">${signalHtml}</div>
+      </div>`;
+
+    document.getElementById('mp-scan-status').innerHTML = '<span style="color:rgba(52,211,153,0.9);font-size:11px">✓ Análise concluída</span>';
+    document.getElementById('mp-action-row').style.display = 'flex';
+
+  } catch(e) {
+    document.getElementById('mp-scan-status').innerHTML = '<span style="color:rgba(248,113,113,0.8);font-size:11px">⚠ Falha na conexão</span>';
+    document.getElementById('mp-metrics-row').innerHTML = `<div class="ios-metric-card" style="grid-column:1/-1"><span style="font-size:12px;color:rgba(255,255,255,0.3)">Não foi possível consultar o Wayback Machine. Tente novamente.</span></div>`;
+  }
+}
+
+async function kronoSuggestKW(productName) {
+  if (!productName || productName.length < 3 || productName === _kronoLastName) return;
+  _kronoLastName = productName;
+
+  const panel = document.getElementById('mp-analyze-panel');
+  panel.style.display = 'block';
+  const kwSection = document.getElementById('mp-kw-section');
+  const chips = document.getElementById('mp-kw-chips');
+  kwSection.style.display = 'block';
+  chips.innerHTML = '<div class="ios-shimmer" style="width:200px;height:26px;border-radius:20px"></div><div class="ios-shimmer" style="width:150px;height:26px;border-radius:20px"></div><div class="ios-shimmer" style="width:170px;height:26px;border-radius:20px"></div>';
+
+  try {
+    const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent('https://suggestqueries.google.com/complete/search?q='+encodeURIComponent(productName)+'&client=firefox&hl=en')}`;
+    const res = await fetch(proxyUrl);
+    const raw = await res.text();
+    let suggestions = [];
+    try { suggestions = JSON.parse(raw)[1] || []; } catch(e) {}
+
+    if (!suggestions.length) {
+      chips.innerHTML = '<span style="font-size:11px;color:rgba(255,255,255,0.3)">Sem sugestões encontradas</span>';
+      return;
+    }
+
+    chips.innerHTML = suggestions.slice(0,8).map(kw =>
+      `<button class="ios-kw-chip" onclick="kronoAddChip(this,'${kw.replace(/'/g,"\\'")}')">
+        <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        ${kw}
+      </button>`
+    ).join('');
+  } catch(e) {
+    chips.innerHTML = '<span style="font-size:11px;color:rgba(255,255,255,0.3)">Não foi possível carregar sugestões</span>';
+  }
+}
+
+function kronoAddChip(btn, kw) {
+  // Copy keyword to clipboard + visual feedback
+  navigator.clipboard?.writeText(kw).catch(()=>{});
+  btn.classList.add('added');
+  btn.innerHTML = `<svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg> ${kw}`;
+  showToast('success', `Keyword copiada: "${kw}"`);
+}
+
+function kronoOpenSW() {
+  const domain = _kronoLastDomain || _kronoCleanDomain(document.getElementById('mp-url').value);
+  if (!domain) { showToast('error', 'Informe a URL primeiro'); return; }
+  window.open(`https://www.similarweb.com/website/${domain}/`, '_blank');
+}
+
+function kronoOpenWayback() {
+  const domain = _kronoLastDomain || _kronoCleanDomain(document.getElementById('mp-url').value);
+  if (!domain) { showToast('error', 'Informe a URL primeiro'); return; }
+  window.open(`https://web.archive.org/web/*/${domain}`, '_blank');
+}
+
+// Reset analyze panel when modal opens fresh
+function resetAnalyzePanel() {
+  _kronoLastDomain = '';
+  _kronoLastName = '';
+  const panel = document.getElementById('mp-analyze-panel');
+  if (panel) panel.style.display = 'none';
+  const kwSection = document.getElementById('mp-kw-section');
+  if (kwSection) kwSection.style.display = 'none';
+  const actionRow = document.getElementById('mp-action-row');
+  if (actionRow) actionRow.style.display = 'none';
 }
 
 function analyzeProduct() {
@@ -4058,6 +4540,33 @@ function renderPlatforms() {
   renderPlatGrid('plat-conhecidas-grid', PLATFORMS.conhecidas, false);
   renderPlatGrid('plat-brasileiras-grid', PLATFORMS.brasileiras, false);
   renderPlatGrid('plat-cod-grid', PLATFORMS.cod, true);
+  renderGarimpoGrid('plat-garimpo-grid', PLATFORMS.garimpo);
+}
+
+function renderGarimpoGrid(containerId, platforms) {
+  const el = document.getElementById(containerId);
+  if (!el) return;
+  el.innerHTML = platforms.map(p => {
+    const isOpen = p.tag && p.tag.includes('Aberto');
+    const isPartial = p.tag && p.tag.includes('Parcial');
+    const isCad = p.tag && p.tag.includes('Cadastro');
+    const statusColor = isOpen ? 'var(--green)' : isPartial ? 'var(--yellow)' : 'var(--muted)';
+    const statusLabel = isOpen ? '🔓 Acesso Livre' : isPartial ? '🔓 Parcialmente Livre' : '🔐 Requer Cadastro';
+    return `
+    <div class="platform-card" style="border-left:3px solid ${statusColor}">
+      <div style="position:absolute;top:12px;right:12px"><span class="badge" style="background:rgba(0,229,255,0.1);color:${statusColor};border:1px solid ${statusColor};font-size:10px">${statusLabel}</span></div>
+      <div class="platform-name">${p.name}</div>
+      <div class="platform-meta">
+        <span style="color:var(--accent)">${p.type}</span>
+        <span>·</span>
+        ${p.niches.slice(0,3).map(n => `<span class="tag">${n}</span>`).join('')}
+      </div>
+      <div class="platform-tip">${p.tip}</div>
+      <div style="display:flex;justify-content:flex-end;margin-top:8px">
+        <a href="https://${p.url}" target="_blank" class="btn btn-secondary btn-sm">🔗 Acessar</a>
+      </div>
+    </div>`;
+  }).join('');
 }
 
 function renderPlatGrid(containerId, platforms, isOculta) {
@@ -4091,7 +4600,7 @@ function renderPlatGrid(containerId, platforms, isOculta) {
 function showPlatTab(tab, el) {
   document.querySelectorAll('#tab-plataformas .sub-tab').forEach(t => t.classList.remove('active'));
   el.classList.add('active');
-  ['plat-ocultas','plat-conhecidas','plat-brasileiras','plat-cod'].forEach(id => {
+  ['plat-ocultas','plat-conhecidas','plat-brasileiras','plat-cod','plat-garimpo'].forEach(id => {
     document.getElementById(id).style.display = id === 'plat-'+tab ? '' : 'none';
   });
 }
@@ -4206,9 +4715,7 @@ function generateCopy() {
   showToast('success', `✅ Ativos gerados para ${product}`);
 }
 
-function copyText(text) {
-  navigator.clipboard.writeText(text).then(() => showToast('success','📋 Copiado!'));
-}
+// copyText — versão completa com fallback está definida abaixo no arquivo
 
 function copySection(id) {
   const el = document.getElementById(id);
@@ -5713,9 +6220,7 @@ function fbSubmit() {
   fbCurrentStar = 0;
 }
 
-function manualOnOpen() {
-  // manual has no FAQ anymore
-}
+// manualOnOpen — definida abaixo junto ao bloco do manual
 
 function fbSubmitFaq() {
   const text = (document.getElementById('fb-text-faq')?.value || '').trim();
@@ -7898,7 +8403,7 @@ function renderDiscoveryResults(products) {
 // =====================================================
 
 let currentCampaign = null;
-let selectedAngle = null;
+// selectedAngle declared at top of script to avoid temporal dead zone
 
 function getCampaignHistory() {
   try { return JSON.parse(localStorage.getItem('vektor5_campaigns') || '[]'); } catch(e) { return []; }
